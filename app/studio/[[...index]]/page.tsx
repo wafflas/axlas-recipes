@@ -1,7 +1,9 @@
 "use client";
 import { NextStudio } from "next-sanity/studio";
-import config from "../../../sanity.config";
+import studioConfig from "../../../sanity.config";
+import type { ComponentType } from "react";
 
 export default function StudioPage() {
-  return <NextStudio config={config} />;
+  const Studio = NextStudio as unknown as ComponentType<{ config: unknown }>;
+  return <Studio config={studioConfig as unknown} />;
 }
