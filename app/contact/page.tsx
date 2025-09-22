@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <main className="w-full min-h-screen">
+    <main className="w-full min-h-screen bg-[#fbf7ea]">
       <HeroTitle title="CONTACT" />
       <div
         className="max-w-2xl mx-auto flex flex-col items-center text-black"
@@ -54,7 +54,7 @@ export default function ContactPage() {
               id="message"
               name="message"
               rows={4}
-              className="w-full rounded border border-black/40 bg-#fbf7ea] p-3 outline-none focus:border-black transition"
+              className="w-full rounded border border-black/40 bg-[#fbf7ea] p-3 outline-none focus:border-black transition"
             />
           </div>
           <div className="w-full flex justify-center pt-2">

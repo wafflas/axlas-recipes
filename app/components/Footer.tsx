@@ -3,7 +3,7 @@ import Logo from "@/app/components/Logo";
 
 export default function Footer() {
   return (
-    <footer className="mt-1 border-t border-black/10 pt-8 pb-8 text-black">
+    <footer className="mt-1 border-t border-black/10 pt-8 pb-8 text-black bg-[#fbf7ea]">
       <div className="max-w-6xl mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 text-sm items-center">
           {/* Left: Logo */}
