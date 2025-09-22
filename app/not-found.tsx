@@ -3,7 +3,7 @@ import HeroTitle from "./components/HeroTitle";
 
 export default function NotFound() {
   return (
-    <main className="w-full min-h-screen">
+    <main className="w-full min-h-screen bg-[#fbf7ea]">
       <HeroTitle title="NOT FOUND" />
       <div className="max-w-6xl mx-auto text-center text-black px-6">
         <p className="text-base md:text-lg opacity-85">

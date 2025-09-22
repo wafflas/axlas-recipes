@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <main className="w-full min-h-screen" style={{ background: "#FCF8EE" }}>
+    <main className="w-full min-h-screen bg-[#fbf7ea]">
       <HeroTitle title="ABOUT" />
       <section
         className="max-w-5xl mx-auto px-4 md:px-6 text-black pt-6"

@@ -32,7 +32,7 @@ export default async function RecipesPage() {
   ]);
 
   return (
-    <main className="w-full min-h-screen mb-10">
+    <main className="w-full min-h-screen mb-10 bg-[#fbf7ea]">
       <HeroTitle title="RECIPES" />
       <RecipesGridClient initialRecipes={recipes} seasons={seasons} />
     </main>
