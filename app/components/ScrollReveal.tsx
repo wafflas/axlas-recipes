@@ -1,6 +1,10 @@
 "use client";
 import React, { useEffect, useMemo, useRef } from "react";
 
+type GsapContextLike = { revert: () => void } | undefined;
+
+let scrollTriggerRegistered = false;
+
 type Props = {
   children: React.ReactNode;
   fromY?: number;
@@ -36,14 +40,13 @@ export default function ScrollReveal({
     if (!el) return;
     if (prefersReduced) return; // no motion
 
-    let ctx: any;
+    let ctx: GsapContextLike;
     (async () => {
       const gsap = (await import("gsap")).default;
       const { ScrollTrigger } = await import("gsap/ScrollTrigger");
-      // @ts-expect-error register once
-      if (!(gsap as any)._scrollTriggerRegistered) {
+      if (!scrollTriggerRegistered) {
         gsap.registerPlugin(ScrollTrigger);
-        (gsap as any)._scrollTriggerRegistered = true;
+        scrollTriggerRegistered = true;
       }
 
       ctx = gsap.context(() => {

@@ -33,7 +33,7 @@ export default function ContactForm() {
       }
       form.reset();
       setStatus("success");
-    } catch (_err) {
+    } catch {
       setErrorMsg("Network error");
       setStatus("error");
     }

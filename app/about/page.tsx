@@ -28,7 +28,7 @@ export default function AboutPage() {
               bowls, quiet plates, and notes you can actually use:
               substitutions, prep tips, and both metric/imperial amounts. Browse
               by season—Spring, Summer, Autumn, Winter—or jump straight to what
-              you're craving.
+              you&#39;re craving.
             </p>
           </div>
 

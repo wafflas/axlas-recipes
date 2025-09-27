@@ -1,6 +1,8 @@
 "use client";
 import React, { useEffect, useMemo, useRef } from "react";
 
+type GsapContextLike = { revert: () => void } | undefined;
+
 type Props = {
   children: React.ReactNode;
   selector?: string; // child selector, default '> *'
@@ -34,17 +36,17 @@ export default function StaggerIn({
     if (!root) return;
     if (prefersReduced) return;
 
-    let ctx: any;
+    let ctx: GsapContextLike;
     (async () => {
       const gsap = (await import("gsap")).default;
       ctx = gsap.context(() => {
         let targets: HTMLElement[] = [];
         try {
-          targets = Array.from(
-            selector
-              ? (root.querySelectorAll(selector) as NodeListOf<HTMLElement>)
-              : (root.children as any)
-          );
+          if (selector) {
+            targets = Array.from(root.querySelectorAll<HTMLElement>(selector));
+          } else {
+            targets = Array.from(root.children) as unknown as HTMLElement[];
+          }
         } catch {
           targets = Array.from(root.children) as unknown as HTMLElement[];
         }

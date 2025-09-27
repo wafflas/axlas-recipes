@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import HeroTitle from "../components/HeroTitle";
-import Link from "next/link";
 import ContactForm from "./ContactForm";
 
 export const metadata: Metadata = {
