@@ -100,7 +100,7 @@ export default function RecipesGridClient({
               className="group"
             >
               <article className="flex flex-col gap-3">
-                <div className="w-full aspect-[4/3] relative overflow-hidden rounded-xl">
+                <div className="w-full aspect-[4/3] relative overflow-hidden">
                   {imgUrl ? (
                     <Image
                       src={imgUrl}

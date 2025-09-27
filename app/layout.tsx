@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 import Spinner from "./components/Spinner";
 import Footer from "./components/Footer";
 import ScrollTop from "./components/ScrollTop";
+import IntroOverlay from "./components/IntroOverlay";
 
 const anton = Anton({
   variable: "--font-anton",
@@ -48,23 +49,28 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${anton.className} ${anton.variable} ${inter.variable} antialiased`}
+        className={`${anton.className} ${anton.variable} ${inter.variable} antialiased bg-[var(--color-primary)] text-black`}
       >
-        <Navbar />
-        <div className="relative">
-          <Spinner navigation minMs={1200} />
-          <Suspense
-            fallback={
-              <div className="w-full min-h-screen flex items-center justify-center">
-                <Spinner size={320} />
-              </div>
-            }
-          >
-            {children}
-          </Suspense>
+        {/* IntroOverlay must render first */}
+        <IntroOverlay />
+        {/* Site wrapper stays hidden until IntroOverlay reveals it */}
+        <div id="site" className="opacity-0">
+          <Navbar />
+          <div className="relative">
+            <Spinner navigation minMs={1200} />
+            <Suspense
+              fallback={
+                <div className="w-full min-h-screen flex items-center justify-center">
+                  <Spinner size={320} />
+                </div>
+              }
+            >
+              {children}
+            </Suspense>
+          </div>
+          <Footer />
+          <ScrollTop />
         </div>
-        <Footer />
-        <ScrollTop />
       </body>
     </html>
   );

@@ -39,7 +39,7 @@ export default function Spinner({
   return (
     <div
       className={wrapperClass}
-      style={navigation ? { background: "#fbf7ea" } : undefined}
+      style={navigation ? { background: "var(--color-primary)" } : undefined}
     >
       <div style={{ width: size, height: size }}>
         <DotLottieReact

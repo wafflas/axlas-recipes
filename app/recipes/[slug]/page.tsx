@@ -58,11 +58,11 @@ export default async function RecipePage(context: {
   const heroUrl = data.heroImage?.asset?.url;
 
   return (
-    <main className="w-full min-h-screen bg-[#fbf7ea]">
+    <main className="w-full min-h-screen bg-[var(--color-primary)]">
       {/* Hero */}
       {heroUrl && (
         <div className="relative max-w-5xl mx-auto px-4 md:px-6 mt-4">
-          <div className="relative w-full aspect-[16/9] md:aspect-[21/10] overflow-hidden rounded-xl">
+          <div className="relative w-full aspect-[16/9] md:aspect-[21/10] overflow-hidden">
             <Image
               src={heroUrl}
               alt={data.heroImage?.alt || data.title}

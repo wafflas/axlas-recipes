@@ -44,7 +44,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`w-full px-3 md:px-4 sticky top-0 z-50 bg-[#fbf7ea] border-black/10 transition-shadow ${scrolled ? "shadow-sm" : "shadow-none"}`}
+      className={`w-full px-3 md:px-4 sticky top-0 z-50 bg-[var(--color-primary)] border-black/10 transition-shadow ${scrolled ? "shadow-sm" : "shadow-none"}`}
     >
       <div className="max-w-6xl mx-auto h-23 flex justify-between items-center text-black">
         <Link
@@ -108,7 +108,7 @@ const Navbar = () => {
 
       {/* Mobile dropdown */}
       {open && (
-        <div className="md:hidden absolute left-0 right-0 top-full bg-[#fbf7ea] border-t border-black/10 shadow-sm">
+        <div className="md:hidden absolute left-0 right-0 top-full bg-[var(--color-primary)] border-t border-black/10 shadow-sm">
           <div className="max-w-6xl mx-auto flex flex-col py-3 text-black">
             <Link
               href="/recipes"

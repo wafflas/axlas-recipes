@@ -22,7 +22,7 @@ export default function ScrollTop() {
       type="button"
       aria-label="Scroll to top"
       onClick={handleClick}
-      className={`fixed right-4 bottom-4 md:right-6 md:bottom-6 z-40 transition-opacity duration-300 ${
+      className={`fixed right-4 bottom-4 md:right-6 md:bottom-6 z-40 transition-opacity duration-300 cursor-pointer ${
         visible ? "opacity-100" : "opacity-0 pointer-events-none"
       }`}
       style={{

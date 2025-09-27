@@ -1,0 +1,4 @@
+1.na valw kefailaia kai sta featured recipes   DONE
+2.na fixarw kapoia kena pou kanei kai skaei aspro mallon overflow   DONE
+3.na settarw to nodemailer
+4.isws na megalwsw ligo to hero title sto homepage DONE
