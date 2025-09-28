@@ -45,8 +45,8 @@ export default function Footer() {
             </a>
           </div>
         </div>
-        <div className="mt-6 text-center opacity-40 text-sm">
-          © 2025 | POWERED BY{" "}
+        <div className="pt-6 text-center opacity-40 text-sm">
+          © 2025 | powered by{" "}
           <a
             href="https://github.com/wafflas"
             target="_blank"

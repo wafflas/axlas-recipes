@@ -7,6 +7,7 @@ import IntroOverlay from "./components/IntroOverlay";
 import ScrollReveal from "./components/ScrollReveal";
 import StaggerIn from "./components/StaggerIn";
 import HeroTitle from "./components/HeroTitle";
+import { FaClock, FaStar } from "react-icons/fa";
 
 export const metadata: Metadata = {
   title: "AXLAS RECIPES",
@@ -105,13 +106,14 @@ export default async function Home() {
       {/* Featured Recipes Section */}
       <section className="max-w-6xl mx-auto px-4 md:px-6 pb-14 text-black">
         <header className="mb-6 flex items-center gap-3">
-          <h2
-            className="text-2xl md:text-4xl"
-            style={{ fontFamily: "var(--font-anton), Arial, sans-serif" }}
-          >
-            FEATURED RECIPES
-          </h2>
-          <svg
+          <div className="flex items-center gap-3 w-full border-b border-black pb-2">
+            <h2
+              className="text-2xl md:text-4xl"
+              style={{ fontFamily: "var(--font-anton), Arial, sans-serif" }}
+            >
+              FEATURED RECIPES
+            </h2>
+            <svg
             width="40"
             height="40"
             viewBox="0 0 24 24"
@@ -126,6 +128,8 @@ export default async function Home() {
               strokeLinecap="round"
             />
           </svg>
+          </div>
+          
         </header>
 
         {rest.length === 0 ? (
@@ -185,7 +189,7 @@ export default async function Home() {
                             {r.summary}
                           </p>
                         )}
-                        <div className="flex gap-4 text-xs text-black/50 font-inter">
+                        <div className="flex gap-4 text-xs text-black font-inter">
                           {diffRaw && (
                             <span className="inline-flex items-center gap-1">
                               <span>{diffRaw}</span>
@@ -193,22 +197,7 @@ export default async function Home() {
                                 <span aria-hidden className="inline-flex">
                                   {Array.from({ length: starCount }).map(
                                     (_, i) => (
-                                      <svg
-                                        key={i}
-                                        width="12"
-                                        height="12"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                      >
-                                        <path
-                                          d="M12 3l2.7 5.5 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.8 1-6.1-4.4-4.3 6.1-.9L12 3z"
-                                          stroke="currentColor"
-                                          strokeWidth="2"
-                                          strokeLinecap="round"
-                                          strokeLinejoin="round"
-                                        />
-                                      </svg>
+                                      <FaStar key={i} />
                                     )
                                   )}
                                 </span>
@@ -221,27 +210,7 @@ export default async function Home() {
                               aria-label={`Total ${total} minutes`}
                             >
                               <span>{total} min</span>
-                              <svg
-                                width="12"
-                                height="12"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <circle
-                                  cx="12"
-                                  cy="12"
-                                  r="9"
-                                  stroke="currentColor"
-                                  strokeWidth="2"
-                                />
-                                <path
-                                  d="M12 7v5l3 2"
-                                  stroke="currentColor"
-                                  strokeWidth="2"
-                                  strokeLinecap="round"
-                                />
-                              </svg>
+                              <FaClock width="12" height="12" />
                             </span>
                           ) : null}
                         </div>

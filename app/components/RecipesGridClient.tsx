@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useMemo, useState, useEffect } from "react";
+import { FaClock, FaStar } from "react-icons/fa";
 
 type Season = {
   title: string;
@@ -90,7 +91,7 @@ export default function RecipesGridClient({
         </div>
       </div>
 
-      <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div className="pt-10 grid grid-cols-1 md:grid-cols-3 gap-10">
         {filtered.slice(0, visibleCount).map((recipe) => {
           const imgUrl = recipe.heroImage?.asset?.url;
           return (
@@ -151,22 +152,7 @@ export default function RecipesGridClient({
                               <span aria-hidden className="inline-flex">
                                 {Array.from({ length: starCount }).map(
                                   (_, i) => (
-                                    <svg
-                                      key={i}
-                                      width="12"
-                                      height="12"
-                                      viewBox="0 0 24 24"
-                                      fill="none"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                      <path
-                                        d="M12 3l2.7 5.5 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.8 1-6.1-4.4-4.3 6.1-.9L12 3z"
-                                        stroke="currentColor"
-                                        strokeWidth="2"
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                      />
-                                    </svg>
+                                    <FaStar key={i} />
                                   )
                                 )}
                               </span>
@@ -179,27 +165,7 @@ export default function RecipesGridClient({
                             aria-label={`Total ${total} minutes`}
                           >
                             <span>{total} min</span>
-                            <svg
-                              width="12"
-                              height="12"
-                              viewBox="0 0 24 24"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <circle
-                                cx="12"
-                                cy="12"
-                                r="9"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                              />
-                              <path
-                                d="M12 7v5l3 2"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                strokeLinecap="round"
-                              />
-                            </svg>
+                            <FaClock width="12" height="12" />
                           </span>
                         ) : null}
                       </>
@@ -212,7 +178,7 @@ export default function RecipesGridClient({
         })}
       </div>
       {filtered.length > visibleCount && (
-        <div className="mt-8 md:mt-10 flex justify-center">
+        <div className="pt-8 md:pt-10 flex justify-center">
           <button
             type="button"
             className="uppercase bg-black text-white px-5 py-3 md:px-6 md:py-3 rounded cursor-pointer hover:bg-gray-800 transition"
