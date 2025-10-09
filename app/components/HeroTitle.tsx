@@ -14,7 +14,7 @@ const HeroTitle = ({
       className={`max-w-6xl mx-auto flex flex-col justify-center items-center py-8 ${className}`}
     >
       {subtitle && (
-        <p className="text-sm md:text-base text-black/60 mb-2 tracking-wider uppercase font-inter">
+        <p className="text-[0.65rem] md:text-base text-black/60 mb-2 tracking-wider uppercase font-inter">
           {subtitle}
         </p>
       )}
