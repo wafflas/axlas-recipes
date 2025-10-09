@@ -23,7 +23,7 @@ export default function IntroOverlay() {
     );
   }, []);
 
-  // Build AXLAS as individual letter spans for stagger
+
   const axlasLetters = useMemo(() => ["A", "X", "L", "A", "S"], []);
 
   // Helper: reveal the #site wrapper and restore scroll
@@ -37,7 +37,7 @@ export default function IntroOverlay() {
     gsap.to(site, { opacity: 1, duration: 0.35, ease: "power1.out" });
   };
 
-  // If not homepage, immediately reveal site
+  // If not homepage immediately reveal site
   useEffect(() => {
     if (!showIntro) {
       revealSite();
@@ -93,7 +93,7 @@ export default function IntroOverlay() {
     };
   }, [mounted, showIntro]);
 
-  // Run GSAP timeline (or reduced-motion fallback)
+
   useEffect(() => {
     if (!mounted || !showIntro) return;
 
@@ -209,7 +209,7 @@ export default function IntroOverlay() {
           ref={recipesRef}
           className="intro-recipes text-4xl sm:text-5xl font-black uppercase opacity-0 -translate-x-3"
         >
-          RECIPES
+          COOKS
         </div>
         <p
           ref={taglineRef}

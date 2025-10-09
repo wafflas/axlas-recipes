@@ -7,8 +7,8 @@ const Logo = () => {
       <Image
         src="/axlas-recipes-logo-removebg-preview.png"
         alt="Logo"
-        width={110}
-        height={110}
+        width={100}
+        height={100}
       />
     </div>
   );

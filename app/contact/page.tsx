@@ -3,14 +3,17 @@ import HeroTitle from "../components/HeroTitle";
 import ContactForm from "./ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact | AXLAS RECIPES",
-  description: "Contact Axlas Recipes.",
+  title: "Contact | AXLAS COOKS",
+  description: "Contact Axlas Cooks.",
 };
 
 export default function ContactPage() {
   return (
     <main className="w-full min-h-screen bg-[var(--color-primary)]">
-      <HeroTitle title="CONTACT" />
+      <HeroTitle
+        title="CONTACT"
+        subtitle="COLLABORATIONS, QUESTIONS, SAY HELLO"
+      />
       <div
         className="max-w-2xl mx-auto flex flex-col items-center text-black"
         style={{

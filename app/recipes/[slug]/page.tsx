@@ -38,10 +38,8 @@ export async function generateMetadata(context: {
     slug,
   });
   return {
-    title: data?.title
-      ? `${data.title} | AXLAS RECIPES`
-      : "Recipe | AXLAS RECIPES",
-    description: data?.summary || "Recipe from AXLAS RECIPES",
+    title: data?.title ? `${data.title} | AXLAS COOKS` : "Recipe | AXLAS COOKS",
+    description: data?.summary || "Recipe from AXLAS COOKS",
   };
 }
 
@@ -106,7 +104,7 @@ export default async function RecipePage(context: {
             <div>
               <strong className="inline-flex items-center gap-2">
                 Cook
-                <GiCookingPot/>
+                <GiCookingPot />
               </strong>
               <div>{data.cookTime ?? 0} min</div>
             </div>

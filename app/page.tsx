@@ -10,8 +10,8 @@ import HeroTitle from "./components/HeroTitle";
 import { FaClock, FaStar } from "react-icons/fa";
 
 export const metadata: Metadata = {
-  title: "AXLAS RECIPES",
-  description: "Home page of AXLAS RECIPES",
+  title: "AXLAS COOKS",
+  description: "Home page of AXLAS COOKS",
 };
 
 export default async function Home() {
@@ -36,7 +36,7 @@ export default async function Home() {
       <section className="max-w-6xl mx-auto px-4 md:px-6 py-10 text-black">
         <header className="mb-12 text-center">
           <HeroTitle
-            title="AXLAS RECIPES"
+            title="AXLAS COOKS"
             subtitle="AN ARCHIVE OF TASTE"
             className="mb-8"
           />
@@ -62,7 +62,7 @@ export default async function Home() {
           <div className="relative w-full aspect-[4/3] md:aspect-[16/9] overflow-hidden">
             <Image
               src="/axlas.png"
-              alt="Axlas Recipes hero"
+              alt="Axlas Cooks hero"
               fill
               priority
               className="object-cover pointer-events-none"
@@ -114,22 +114,21 @@ export default async function Home() {
               FEATURED RECIPES
             </h2>
             <svg
-            width="40"
-            height="40"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="text-black"
-          >
-            <path
-              d="M12 5v14M5 12h14"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-          </svg>
+              width="40"
+              height="40"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="text-black"
+            >
+              <path
+                d="M12 5v14M5 12h14"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+              />
+            </svg>
           </div>
-          
         </header>
 
         {rest.length === 0 ? (

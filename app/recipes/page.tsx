@@ -5,7 +5,7 @@ import { recipesGridQuery, seasonsListQuery } from "@/sanity/queries";
 import RecipesGridClient from "../components/RecipesGridClient";
 
 export const metadata: Metadata = {
-  title: "Recipes | AXLAS RECIPES",
+  title: "Recipes | AXLAS COOKS",
   description: "Browse recipes by season and tags.",
 };
 
@@ -32,8 +32,8 @@ export default async function RecipesPage() {
   ]);
 
   return (
-    <main className="w-full min-h-screen mb-10 bg-[var(--color-primary)]">
-      <HeroTitle title="RECIPES" />
+    <main className="w-full min-h-screen pb-10 bg-[var(--color-primary)]">
+      <HeroTitle title="RECIPES" subtitle="BROWSE BY SEASON AND TAGS" />
       <RecipesGridClient initialRecipes={recipes} seasons={seasons} />
     </main>
   );

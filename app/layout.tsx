@@ -20,7 +20,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "AXLAS RECIPES",
+  title: "AXLAS COOKS",
   description: "Modern editorial recipes and seasonal cooking.",
   icons: {
     icon: [

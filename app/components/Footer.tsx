@@ -15,34 +15,46 @@ export default function Footer() {
 
           {/* Center: Nav */}
           <nav className="flex flex-wrap justify-center gap-4 md:gap-6 text-lg">
-            <Link href="/recipes">RECIPES</Link>
-            <Link href="/about">ABOUT</Link>
-            <Link href="/contact">CONTACT</Link>
+            <Link className="hover:underline" href="/recipes">
+              RECIPES
+            </Link>
+            <Link className="hover:underline" href="/about">
+              ABOUT
+            </Link>
+            <Link className="hover:underline" href="/contact">
+              CONTACT
+            </Link>
           </nav>
 
           {/* Right: Socials */}
           <div className="flex justify-center md:justify-end gap-4 md:gap-6 text-lg">
-            <a
-              href="#"
+            <Link
+              href="https://www.instagram.com/george_axlas/"
               aria-label="Instagram"
-              className="min-h-[44px] inline-flex items-center"
+              className="min-h-[44px] inline-flex items-center hover:underline"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Instagram
-            </a>
-            <a
-              href="#"
+            </Link>
+
+            <Link
+              href="https://www.tiktok.com/@axlas.cooks"
               aria-label="TikTok"
-              className="min-h-[44px] inline-flex items-center"
+              className="min-h-[44px] inline-flex items-center hover:underline"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               TikTok
-            </a>
-            <a
+            </Link>
+
+            <Link
               href="mailto:hello@example.com"
               aria-label="Email"
-              className="min-h-[44px] inline-flex items-center"
+              className="min-h-[44px] inline-flex items-center hover:underline"
             >
               Email
-            </a>
+            </Link>
           </div>
         </div>
         <div className="pt-6 text-center opacity-40 text-sm">
