@@ -7,6 +7,7 @@ import IntroOverlay from "./components/IntroOverlay";
 import ScrollReveal from "./components/ScrollReveal";
 import StaggerIn from "./components/StaggerIn";
 import HeroTitle from "./components/HeroTitle";
+import ReelsSection from "./components/ReelsSection";
 import { FaClock, FaStar } from "react-icons/fa";
 
 export const metadata: Metadata = {
@@ -222,6 +223,9 @@ export default async function Home() {
           </StaggerIn>
         )}
       </section>
+
+      {/* Latest Reels Section */}
+      <ReelsSection />
     </main>
   );
 }
