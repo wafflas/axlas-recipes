@@ -21,6 +21,10 @@ type ReelsSectionProps = {
 
 const API_ENDPOINT = "/api/tiktok-videos";
 
+// Build proxied URL for remote images to avoid CDN hotlink blocks
+const toProxy = (url: string) =>
+  `/api/image-proxy?url=${encodeURIComponent(url)}`;
+
 // Function to fetch videos from our API
 async function fetchTikTokVideos(): Promise<ReelData[]> {
   try {
@@ -127,14 +131,16 @@ function ReelItem({
             {thumbnail ? (
               <>
                 <Image
-                  src={thumbnail}
+                  src={toProxy(thumbnail)}
                   alt={reel.title || "TikTok video"}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 33vw"
+                  unoptimized
+                  referrerPolicy="no-referrer"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  onError={(e) => {
-                    // if thumbnail fails to load hide the image and show fallback
-                    e.currentTarget.style.display = "none";
+                  onError={() => {
+                    // Clear thumbnail to trigger UI fallback if loading fails
+                    setThumbnail(null);
                   }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-black/20 to-transparent" />
